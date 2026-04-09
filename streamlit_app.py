@@ -14,8 +14,9 @@ st.set_page_config(
 )
 
 # Volcano Engine API configuration
-VOLCANO_API_ENDPOINT = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+VOLCANO_API_ENDPOINT = "https://ark.cn-beijing.volces.com/api/coding"
 VOLCANO_API_KEY = "76437c9f-9c6a-4ca4-aee1-47d2971a0db2"
+
 
 # Functions
 def extract_pdf_content(content):
@@ -104,7 +105,6 @@ def translate_chunk(chunk):
         }
 
         payload = {
-            "model": "doubao-pro-32k",
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"请翻译以下内容：\n\n{chunk}"}
