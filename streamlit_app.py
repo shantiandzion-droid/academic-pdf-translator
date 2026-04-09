@@ -101,8 +101,10 @@ def translate_chunk(chunk):
     try:
         headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {VOLCANO_API_KEY}"
+            "Authorization": f"Bearer {VOLCANO_API_KEY}",
+            "X-API-Key": VOLCANO_API_KEY
         }
+
 
         payload = {
             "messages": [
