@@ -106,7 +106,7 @@ def translate_chunk(chunk):
 
 
 
-         payload = {
+        payload = {
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"请翻译以下内容：\n\n{chunk}"}
